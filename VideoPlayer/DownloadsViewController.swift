@@ -127,10 +127,18 @@ extension DownloadsViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let video = videos[indexPath.row]
-        let viewController = self.storyboard!.instantiateViewController(withIdentifier: "showVideo") as! ShowVideoFromDownloadsViewController
-        viewController.video = video
-        self.present(viewController, animated: true, completion: nil)
-        
+        if video.videoURL == "downloading" {
+            let alert = UIAlertController(title: "Error", message: "Video is downloading now", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
+            videos.removeAll()
+            getData()
+            self.tableView.reloadData()
+        } else {
+            let viewController = self.storyboard!.instantiateViewController(withIdentifier: "showVideo") as! ShowVideoFromDownloadsViewController
+            viewController.video = video
+            self.present(viewController, animated: true, completion: nil)
+        }
     }
     
     func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCell.EditingStyle {
