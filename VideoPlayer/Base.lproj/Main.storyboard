@@ -66,7 +66,7 @@
                                 </connections>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gxT-HY-cRj">
-                                <rect key="frame" x="20" y="129" width="374" height="31"/>
+                                <rect key="frame" x="154" y="129" width="106" height="31"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Clear history"/>
                                 <connections>
@@ -90,7 +90,6 @@
                             <constraint firstItem="FRh-4u-t07" firstAttribute="top" secondItem="taY-Xf-Uuo" secondAttribute="top" id="4s5-Bu-YnI"/>
                             <constraint firstItem="taY-Xf-Uuo" firstAttribute="trailing" secondItem="F3F-dW-b1w" secondAttribute="trailing" constant="20" id="8oi-bE-yvt"/>
                             <constraint firstItem="FRh-4u-t07" firstAttribute="leading" secondItem="taY-Xf-Uuo" secondAttribute="leading" constant="20" id="Bct-bq-Wav"/>
-                            <constraint firstItem="gxT-HY-cRj" firstAttribute="leading" secondItem="taY-Xf-Uuo" secondAttribute="leading" constant="20" id="DEI-le-EUr"/>
                             <constraint firstItem="F3F-dW-b1w" firstAttribute="leading" secondItem="taY-Xf-Uuo" secondAttribute="leading" constant="20" id="HfV-kP-DVu"/>
                             <constraint firstItem="gxT-HY-cRj" firstAttribute="top" secondItem="F3F-dW-b1w" secondAttribute="bottom" constant="10" id="IBP-Ra-uzt"/>
                             <constraint firstItem="RXT-E4-CFw" firstAttribute="top" secondItem="gxT-HY-cRj" secondAttribute="bottom" constant="20" id="ZfU-Mn-OyI"/>
@@ -98,8 +97,8 @@
                             <constraint firstItem="taY-Xf-Uuo" firstAttribute="trailing" secondItem="FRh-4u-t07" secondAttribute="trailing" constant="20" id="j6D-2U-oOU"/>
                             <constraint firstItem="taY-Xf-Uuo" firstAttribute="trailing" secondItem="H4X-WX-jV9" secondAttribute="trailing" constant="20" id="keX-oi-aI3"/>
                             <constraint firstItem="RXT-E4-CFw" firstAttribute="leading" secondItem="taY-Xf-Uuo" secondAttribute="leading" constant="20" id="lDD-N9-esV"/>
-                            <constraint firstItem="taY-Xf-Uuo" firstAttribute="trailing" secondItem="gxT-HY-cRj" secondAttribute="trailing" constant="20" id="q8R-eF-zCU"/>
                             <constraint firstItem="H4X-WX-jV9" firstAttribute="top" secondItem="F3F-dW-b1w" secondAttribute="bottom" constant="10" id="tgz-Rs-0Qe"/>
+                            <constraint firstItem="gxT-HY-cRj" firstAttribute="centerX" secondItem="RXT-E4-CFw" secondAttribute="centerX" id="vAy-b0-X13"/>
                             <constraint firstItem="taY-Xf-Uuo" firstAttribute="trailing" secondItem="RXT-E4-CFw" secondAttribute="trailing" constant="20" id="zA0-lN-mpr"/>
                         </constraints>
                     </view>

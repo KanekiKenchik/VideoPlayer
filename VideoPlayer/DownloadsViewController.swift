@@ -110,6 +110,14 @@ class DownloadsViewController: UIViewController {
         }
         
     }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        if touches.first != nil {
+            view.endEditing(true)
+        }
+        
+        super.touchesBegan(touches, with: event)
+    }
 
 }
 
