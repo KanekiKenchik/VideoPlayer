@@ -97,6 +97,7 @@
                             <constraint firstItem="taY-Xf-Uuo" firstAttribute="trailing" secondItem="FRh-4u-t07" secondAttribute="trailing" constant="20" id="j6D-2U-oOU"/>
                             <constraint firstItem="taY-Xf-Uuo" firstAttribute="trailing" secondItem="H4X-WX-jV9" secondAttribute="trailing" constant="20" id="keX-oi-aI3"/>
                             <constraint firstItem="RXT-E4-CFw" firstAttribute="leading" secondItem="taY-Xf-Uuo" secondAttribute="leading" constant="20" id="lDD-N9-esV"/>
+                            <constraint firstItem="H4X-WX-jV9" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="taY-Xf-Uuo" secondAttribute="leading" symbolic="YES" id="lnW-wR-Jub"/>
                             <constraint firstItem="taY-Xf-Uuo" firstAttribute="trailing" secondItem="gxT-HY-cRj" secondAttribute="trailing" constant="20" id="q8R-eF-zCU"/>
                             <constraint firstItem="H4X-WX-jV9" firstAttribute="top" secondItem="F3F-dW-b1w" secondAttribute="bottom" constant="10" id="tgz-Rs-0Qe"/>
                             <constraint firstItem="taY-Xf-Uuo" firstAttribute="trailing" secondItem="RXT-E4-CFw" secondAttribute="trailing" constant="20" id="zA0-lN-mpr"/>
@@ -170,7 +171,7 @@
                                         <rect key="frame" x="361.5" y="20" width="52.5" height="31"/>
                                         <color key="tintColor" systemColor="systemGray2Color"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" image="volume.3" catalog="system" title=""/>
+                                        <buttonConfiguration key="configuration" style="plain" image="speaker.wave.3" catalog="system" title=""/>
                                         <connections>
                                             <action selector="volumeButtonAction:" destination="cNP-Sl-cLc" eventType="touchUpInside" id="CRO-xD-AMD"/>
                                             <action selector="volumeButtonAction:" destination="UOK-2R-cOg" eventType="touchUpInside" id="xOH-5o-lti"/>
@@ -180,18 +181,21 @@
                                 <color key="backgroundColor" systemColor="labelColor"/>
                                 <constraints>
                                     <constraint firstItem="cXd-vJ-DNE" firstAttribute="top" secondItem="WQ4-MV-x4q" secondAttribute="top" constant="20" id="2MY-AH-C7L"/>
+                                    <constraint firstAttribute="trailing" secondItem="zW4-UE-vjZ" secondAttribute="trailing" constant="132.5" id="5Ty-Ht-ccJ"/>
                                     <constraint firstItem="zW4-UE-vjZ" firstAttribute="centerY" secondItem="WQ4-MV-x4q" secondAttribute="centerY" id="8DZ-57-XsL"/>
-                                    <constraint firstItem="zW4-UE-vjZ" firstAttribute="leading" secondItem="yKf-nW-bUQ" secondAttribute="trailing" constant="10" id="9lI-w5-6dq"/>
+                                    <constraint firstItem="zW4-UE-vjZ" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="yKf-nW-bUQ" secondAttribute="trailing" symbolic="YES" id="9lI-w5-6dq"/>
                                     <constraint firstAttribute="bottom" secondItem="HPj-tt-LZq" secondAttribute="bottom" constant="20" id="AX9-ST-5pi"/>
                                     <constraint firstItem="HPj-tt-LZq" firstAttribute="leading" secondItem="Xwv-33-bCt" secondAttribute="trailing" constant="20" id="Ave-2L-yf7"/>
+                                    <constraint firstItem="Tbj-oL-Ll2" firstAttribute="leading" secondItem="WQ4-MV-x4q" secondAttribute="leading" constant="133" id="COL-QT-HyZ"/>
                                     <constraint firstAttribute="trailing" secondItem="cXd-vJ-DNE" secondAttribute="trailing" id="Hfm-SO-uQE"/>
+                                    <constraint firstItem="cXd-vJ-DNE" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="WQ4-MV-x4q" secondAttribute="leading" constant="20" symbolic="YES" id="Iec-Df-a30"/>
                                     <constraint firstAttribute="bottom" secondItem="Xwv-33-bCt" secondAttribute="bottom" constant="10" id="RIY-w7-AK3"/>
                                     <constraint firstItem="Tbj-oL-Ll2" firstAttribute="centerY" secondItem="WQ4-MV-x4q" secondAttribute="centerY" id="T0c-Ca-C00"/>
                                     <constraint firstItem="yKf-nW-bUQ" firstAttribute="centerX" secondItem="WQ4-MV-x4q" secondAttribute="centerX" id="iXY-sv-dF3"/>
                                     <constraint firstItem="yKf-nW-bUQ" firstAttribute="centerY" secondItem="WQ4-MV-x4q" secondAttribute="centerY" id="j1I-B3-hmX"/>
                                     <constraint firstAttribute="trailing" secondItem="HPj-tt-LZq" secondAttribute="trailing" constant="10" id="jh6-Va-HJ6"/>
                                     <constraint firstItem="Xwv-33-bCt" firstAttribute="leading" secondItem="WQ4-MV-x4q" secondAttribute="leadingMargin" id="l7a-7K-qul"/>
-                                    <constraint firstItem="yKf-nW-bUQ" firstAttribute="leading" secondItem="Tbj-oL-Ll2" secondAttribute="trailing" constant="10" id="nLS-lC-srv"/>
+                                    <constraint firstItem="yKf-nW-bUQ" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Tbj-oL-Ll2" secondAttribute="trailing" symbolic="YES" id="nLS-lC-srv"/>
                                     <constraint firstAttribute="height" constant="250" id="oLw-nq-gvd"/>
                                     <constraint firstItem="Xwv-33-bCt" firstAttribute="top" secondItem="yKf-nW-bUQ" secondAttribute="bottom" constant="60" id="x0A-Ib-PMN"/>
                                 </constraints>
@@ -249,13 +253,13 @@
                                         </connections>
                                     </button>
                                     <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="zQM-Lp-1bE">
-                                        <rect key="frame" x="6" y="200.5" width="344" height="40.5"/>
+                                        <rect key="frame" x="6" y="199.5" width="344" height="41.5"/>
                                         <connections>
                                             <action selector="videoProgressSliderAction:" destination="UOK-2R-cOg" eventType="valueChanged" id="Uil-Va-ehO"/>
                                         </connections>
                                     </slider>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h5S-JX-11y">
-                                        <rect key="frame" x="368" y="210.5" width="36" height="19.5"/>
+                                        <rect key="frame" x="368" y="209.5" width="36" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" systemColor="systemGray2Color"/>
                                         <nil key="highlightedColor"/>
@@ -282,7 +286,7 @@
                                         <rect key="frame" x="361.5" y="20" width="52.5" height="31"/>
                                         <color key="tintColor" systemColor="systemGray2Color"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" image="volume.3" catalog="system" title=""/>
+                                        <buttonConfiguration key="configuration" style="plain" image="speaker.wave.3" catalog="system" title=""/>
                                         <connections>
                                             <action selector="volumeButtonAction:" destination="UOK-2R-cOg" eventType="touchUpInside" id="SbX-pY-J4y"/>
                                         </connections>
@@ -291,20 +295,22 @@
                                 <color key="backgroundColor" systemColor="labelColor"/>
                                 <constraints>
                                     <constraint firstItem="gmu-zy-TU7" firstAttribute="centerX" secondItem="bdm-bj-VvT" secondAttribute="centerX" id="5db-KG-ZT7"/>
+                                    <constraint firstItem="fXD-X9-ge3" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="bdm-bj-VvT" secondAttribute="leading" constant="20" symbolic="YES" id="8uN-Ud-Oh1"/>
                                     <constraint firstItem="zQM-Lp-1bE" firstAttribute="centerY" secondItem="h5S-JX-11y" secondAttribute="centerY" id="ABV-AA-DeA"/>
                                     <constraint firstItem="h5S-JX-11y" firstAttribute="leading" secondItem="zQM-Lp-1bE" secondAttribute="trailing" constant="20" id="HXa-aa-tCn"/>
                                     <constraint firstAttribute="bottom" secondItem="h5S-JX-11y" secondAttribute="bottom" constant="20" id="Osw-xd-30I"/>
                                     <constraint firstAttribute="bottom" secondItem="zQM-Lp-1bE" secondAttribute="bottom" constant="10" id="QFy-tN-iET"/>
+                                    <constraint firstItem="ePd-fB-Ct2" firstAttribute="leading" secondItem="bdm-bj-VvT" secondAttribute="leading" constant="133" id="R5A-Xi-6Fm"/>
                                     <constraint firstAttribute="height" constant="250" id="W7q-IL-xqP"/>
                                     <constraint firstItem="ePd-fB-Ct2" firstAttribute="centerY" secondItem="bdm-bj-VvT" secondAttribute="centerY" id="WcK-Ci-let"/>
                                     <constraint firstItem="gmu-zy-TU7" firstAttribute="centerY" secondItem="bdm-bj-VvT" secondAttribute="centerY" id="YGf-UR-BfB"/>
-                                    <constraint firstItem="zQM-Lp-1bE" firstAttribute="top" secondItem="gmu-zy-TU7" secondAttribute="bottom" constant="60" id="Z8Q-FV-qlI"/>
+                                    <constraint firstAttribute="trailing" secondItem="3Fn-4k-u9j" secondAttribute="trailing" constant="132.5" id="bM7-o5-gGN"/>
                                     <constraint firstItem="3Fn-4k-u9j" firstAttribute="centerY" secondItem="bdm-bj-VvT" secondAttribute="centerY" id="gWk-hS-0Dm"/>
                                     <constraint firstAttribute="trailing" secondItem="h5S-JX-11y" secondAttribute="trailing" constant="10" id="hej-V4-ShL"/>
                                     <constraint firstItem="fXD-X9-ge3" firstAttribute="top" secondItem="bdm-bj-VvT" secondAttribute="top" constant="20" id="lRM-fA-c17"/>
                                     <constraint firstItem="zQM-Lp-1bE" firstAttribute="leading" secondItem="bdm-bj-VvT" secondAttribute="leadingMargin" id="oc8-4f-A8Q"/>
-                                    <constraint firstItem="gmu-zy-TU7" firstAttribute="leading" secondItem="ePd-fB-Ct2" secondAttribute="trailing" constant="10" id="wIs-rn-yMh"/>
-                                    <constraint firstItem="3Fn-4k-u9j" firstAttribute="leading" secondItem="gmu-zy-TU7" secondAttribute="trailing" constant="10" id="yRf-v9-0yy"/>
+                                    <constraint firstItem="gmu-zy-TU7" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="ePd-fB-Ct2" secondAttribute="trailing" constant="8" symbolic="YES" id="wIs-rn-yMh"/>
+                                    <constraint firstItem="3Fn-4k-u9j" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="gmu-zy-TU7" secondAttribute="trailing" constant="8" symbolic="YES" id="yRf-v9-0yy"/>
                                     <constraint firstAttribute="trailing" secondItem="fXD-X9-ge3" secondAttribute="trailing" id="z92-ir-yr5"/>
                                 </constraints>
                             </view>
@@ -355,6 +361,7 @@
                             <constraint firstItem="bdm-bj-VvT" firstAttribute="leading" secondItem="ig6-CJ-o81" secondAttribute="leading" id="IM0-0P-eEG"/>
                             <constraint firstItem="ig6-CJ-o81" firstAttribute="trailing" secondItem="JXE-9i-b2w" secondAttribute="trailing" constant="20" id="LOM-ed-HYy"/>
                             <constraint firstItem="ig6-CJ-o81" firstAttribute="trailing" secondItem="p4g-Bl-P6S" secondAttribute="trailing" constant="20" id="aSP-8Z-Wq2"/>
+                            <constraint firstItem="VVh-vZ-TuS" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="ig6-CJ-o81" secondAttribute="leading" symbolic="YES" id="h1q-nw-qb9"/>
                             <constraint firstItem="bdm-bj-VvT" firstAttribute="top" secondItem="p4g-Bl-P6S" secondAttribute="bottom" constant="15" id="ot6-6N-NSg"/>
                             <constraint firstItem="JXE-9i-b2w" firstAttribute="leading" secondItem="ig6-CJ-o81" secondAttribute="leading" constant="20" id="qIR-nM-7S7"/>
                             <constraint firstItem="p4g-Bl-P6S" firstAttribute="leading" secondItem="ig6-CJ-o81" secondAttribute="leading" constant="20" id="vWj-rF-6B4"/>
@@ -401,7 +408,7 @@
         <image name="arrow.uturn.right" catalog="system" width="128" height="112"/>
         <image name="magnifyingglass" catalog="system" width="128" height="115"/>
         <image name="pause" catalog="system" width="88" height="128"/>
-        <image name="volume.3" catalog="system" width="128" height="86"/>
+        <image name="speaker.wave.3" catalog="system" width="128" height="86"/>
         <image name="xmark" catalog="system" width="128" height="113"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

@@ -19,6 +19,8 @@ class SearchViewController: UIViewController, URLSessionDelegate {
     
     var downloadTask: URLSessionDownloadTask?
     
+    var videoURL: String?
+    
     @IBOutlet weak var avPlayerView: AVPlayerView!
     
     @IBOutlet weak var urlPlaceholder: UITextField!
@@ -33,6 +35,8 @@ class SearchViewController: UIViewController, URLSessionDelegate {
         
         urlPlaceholder.resignFirstResponder()
         
+        videoURL = urlPlaceholder.text ?? ""
+        
         guard Reachability.isConnectedToNetwork() == true else {
             
             let alert = UIAlertController(title: "Network error", message: "Lost internet connection", preferredStyle: UIAlertController.Style.alert)
@@ -44,8 +48,6 @@ class SearchViewController: UIViewController, URLSessionDelegate {
     
         if urlPlaceholder.text != "" {
             self.player = AVPlayer(url: URL(string: urlPlaceholder.text!)!)
-    //            let layer = AVPlayerLayer(player: self.player)
-    //            layer.frame = view.bounds
             let castedLayer = self.avPlayerView.layer as! AVPlayerLayer
             castedLayer.player = player
             self.videoProgressSlider.maximumValue = Float(player.currentItem?.asset.duration.seconds ?? 0)
@@ -133,7 +135,7 @@ class SearchViewController: UIViewController, URLSessionDelegate {
         
         if ifVideoIsEntered(player: player) != 0 {
             if player.volume == 0.0 {
-                volumeButton.setImage(UIImage(systemName: "volume.3"), for: .normal)
+                volumeButton.setImage(UIImage(systemName: "speaker.wave.3"), for: .normal)
                 player.volume = 1.0
             } else {
                 volumeButton.setImage(UIImage(systemName: "volume.slash"), for: .normal)
@@ -191,7 +193,7 @@ class SearchViewController: UIViewController, URLSessionDelegate {
         newEntity.setValue(videoName, forKey: "videoName")
         newEntity.setValue("downloading", forKey: "videoURL")
         
-        let downloadRequest = NSMutableURLRequest(url: URL(string: urlPlaceholder.text ?? "")!)
+        let downloadRequest = NSMutableURLRequest(url: URL(string: videoURL ?? "")!)
         let session = URLSession(configuration: .default, delegate: self, delegateQueue: OperationQueue())
         self.downloadTask = session.downloadTask(with: downloadRequest as URLRequest, completionHandler: { [self] (url, response, error) in
             
