@@ -1,0 +1,514 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1106299327D2471F0046ABDD /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1106299227D2471F0046ABDD /* Reachability.swift */; };
+		1119ADF727C417D70097876E /* DownloadsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1119ADF627C417D70097876E /* DownloadsViewController.swift */; };
+		1119ADF927C670470097876E /* VideoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1119ADF827C670470097876E /* VideoTableViewCell.swift */; };
+		1119ADFB27C6A00C0097876E /* ShowVideoFromDownloadsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1119ADFA27C6A00B0097876E /* ShowVideoFromDownloadsViewController.swift */; };
+		1134024C27BE9AA700EE6A86 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1134024B27BE9AA700EE6A86 /* AppDelegate.swift */; };
+		1134024E27BE9AA700EE6A86 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1134024D27BE9AA700EE6A86 /* SceneDelegate.swift */; };
+		1134025327BE9AA700EE6A86 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1134025127BE9AA700EE6A86 /* Main.storyboard */; };
+		1134025627BE9AA700EE6A86 /* VideoPlayer.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1134025427BE9AA700EE6A86 /* VideoPlayer.xcdatamodeld */; };
+		1134025827BE9AA800EE6A86 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1134025727BE9AA800EE6A86 /* Assets.xcassets */; };
+		1134025B27BE9AA800EE6A86 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1134025927BE9AA800EE6A86 /* LaunchScreen.storyboard */; };
+		1134026727BE9BA900EE6A86 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1134026627BE9BA900EE6A86 /* SearchViewController.swift */; };
+		114EC4F327C6A82C00319A86 /* VideoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 114EC4F227C6A82C00319A86 /* VideoModel.swift */; };
+		11E267AB27C046EF002CC463 /* AVPlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11E267AA27C046EF002CC463 /* AVPlayerView.swift */; };
+		7C02B1A77E740919D18D0353 /* Pods_VideoPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F77A43CCAAA58318D74EE5C /* Pods_VideoPlayer.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		11C8E7DA27CC194E003D556D /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		1106299227D2471F0046ABDD /* Reachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
+		1119ADF627C417D70097876E /* DownloadsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadsViewController.swift; sourceTree = "<group>"; };
+		1119ADF827C670470097876E /* VideoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoTableViewCell.swift; sourceTree = "<group>"; };
+		1119ADFA27C6A00B0097876E /* ShowVideoFromDownloadsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowVideoFromDownloadsViewController.swift; sourceTree = "<group>"; };
+		1134024827BE9AA700EE6A86 /* VideoPlayer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VideoPlayer.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1134024B27BE9AA700EE6A86 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		1134024D27BE9AA700EE6A86 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		1134025227BE9AA700EE6A86 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		1134025527BE9AA700EE6A86 /* VideoPlayer.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = VideoPlayer.xcdatamodel; sourceTree = "<group>"; };
+		1134025727BE9AA800EE6A86 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		1134025A27BE9AA800EE6A86 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		1134025C27BE9AA800EE6A86 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1134026627BE9BA900EE6A86 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		114EC4F227C6A82C00319A86 /* VideoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoModel.swift; sourceTree = "<group>"; };
+		11E267AA27C046EF002CC463 /* AVPlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AVPlayerView.swift; sourceTree = "<group>"; };
+		1F77A43CCAAA58318D74EE5C /* Pods_VideoPlayer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VideoPlayer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		849CA5B506F4A97C6AC279D0 /* Pods-VideoPlayer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VideoPlayer.debug.xcconfig"; path = "Target Support Files/Pods-VideoPlayer/Pods-VideoPlayer.debug.xcconfig"; sourceTree = "<group>"; };
+		9F170B6D93B77F9AA601287D /* Pods-VideoPlayer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VideoPlayer.release.xcconfig"; path = "Target Support Files/Pods-VideoPlayer/Pods-VideoPlayer.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1134024527BE9AA700EE6A86 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7C02B1A77E740919D18D0353 /* Pods_VideoPlayer.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1134023F27BE9AA700EE6A86 = {
+			isa = PBXGroup;
+			children = (
+				1134024A27BE9AA700EE6A86 /* VideoPlayer */,
+				1134024927BE9AA700EE6A86 /* Products */,
+				4C98799854471AAE2163A155 /* Pods */,
+				CB8B8DC88E10F50D10A7217C /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		1134024927BE9AA700EE6A86 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1134024827BE9AA700EE6A86 /* VideoPlayer.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1134024A27BE9AA700EE6A86 /* VideoPlayer */ = {
+			isa = PBXGroup;
+			children = (
+				1134024B27BE9AA700EE6A86 /* AppDelegate.swift */,
+				1134024D27BE9AA700EE6A86 /* SceneDelegate.swift */,
+				1134026627BE9BA900EE6A86 /* SearchViewController.swift */,
+				1119ADF627C417D70097876E /* DownloadsViewController.swift */,
+				1119ADFA27C6A00B0097876E /* ShowVideoFromDownloadsViewController.swift */,
+				11E267AA27C046EF002CC463 /* AVPlayerView.swift */,
+				1134025127BE9AA700EE6A86 /* Main.storyboard */,
+				1134025727BE9AA800EE6A86 /* Assets.xcassets */,
+				11C8E7D627C95C39003D556D /* Templates */,
+				1134026327BE9AB400EE6A86 /* Network */,
+				1134026227BE9AAF00EE6A86 /* Models */,
+				1134025927BE9AA800EE6A86 /* LaunchScreen.storyboard */,
+				1134025C27BE9AA800EE6A86 /* Info.plist */,
+				1134025427BE9AA700EE6A86 /* VideoPlayer.xcdatamodeld */,
+			);
+			path = VideoPlayer;
+			sourceTree = "<group>";
+		};
+		1134026227BE9AAF00EE6A86 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				114EC4F227C6A82C00319A86 /* VideoModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		1134026327BE9AB400EE6A86 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				1106299227D2471F0046ABDD /* Reachability.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		11C8E7D627C95C39003D556D /* Templates */ = {
+			isa = PBXGroup;
+			children = (
+				1119ADF827C670470097876E /* VideoTableViewCell.swift */,
+			);
+			path = Templates;
+			sourceTree = "<group>";
+		};
+		4C98799854471AAE2163A155 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				849CA5B506F4A97C6AC279D0 /* Pods-VideoPlayer.debug.xcconfig */,
+				9F170B6D93B77F9AA601287D /* Pods-VideoPlayer.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		CB8B8DC88E10F50D10A7217C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1F77A43CCAAA58318D74EE5C /* Pods_VideoPlayer.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1134024727BE9AA700EE6A86 /* VideoPlayer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1134025F27BE9AA800EE6A86 /* Build configuration list for PBXNativeTarget "VideoPlayer" */;
+			buildPhases = (
+				08D44F185B3DD2CE9AA8143B /* [CP] Check Pods Manifest.lock */,
+				1134024427BE9AA700EE6A86 /* Sources */,
+				1134024527BE9AA700EE6A86 /* Frameworks */,
+				1134024627BE9AA700EE6A86 /* Resources */,
+				11C8E7DA27CC194E003D556D /* Embed Frameworks */,
+				8830585E50CBB5540333BD01 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = VideoPlayer;
+			productName = VideoPlayer;
+			productReference = 1134024827BE9AA700EE6A86 /* VideoPlayer.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1134024027BE9AA700EE6A86 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1320;
+				LastUpgradeCheck = 1320;
+				TargetAttributes = {
+					1134024727BE9AA700EE6A86 = {
+						CreatedOnToolsVersion = 13.2.1;
+					};
+				};
+			};
+			buildConfigurationList = 1134024327BE9AA700EE6A86 /* Build configuration list for PBXProject "VideoPlayer" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 1134023F27BE9AA700EE6A86;
+			productRefGroup = 1134024927BE9AA700EE6A86 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1134024727BE9AA700EE6A86 /* VideoPlayer */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1134024627BE9AA700EE6A86 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1134025B27BE9AA800EE6A86 /* LaunchScreen.storyboard in Resources */,
+				1134025827BE9AA800EE6A86 /* Assets.xcassets in Resources */,
+				1134025327BE9AA700EE6A86 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		08D44F185B3DD2CE9AA8143B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-VideoPlayer-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8830585E50CBB5540333BD01 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-VideoPlayer/Pods-VideoPlayer-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-VideoPlayer/Pods-VideoPlayer-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-VideoPlayer/Pods-VideoPlayer-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1134024427BE9AA700EE6A86 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				11E267AB27C046EF002CC463 /* AVPlayerView.swift in Sources */,
+				1134026727BE9BA900EE6A86 /* SearchViewController.swift in Sources */,
+				1119ADF727C417D70097876E /* DownloadsViewController.swift in Sources */,
+				1134025627BE9AA700EE6A86 /* VideoPlayer.xcdatamodeld in Sources */,
+				1134024C27BE9AA700EE6A86 /* AppDelegate.swift in Sources */,
+				1119ADFB27C6A00C0097876E /* ShowVideoFromDownloadsViewController.swift in Sources */,
+				1106299327D2471F0046ABDD /* Reachability.swift in Sources */,
+				1134024E27BE9AA700EE6A86 /* SceneDelegate.swift in Sources */,
+				1119ADF927C670470097876E /* VideoTableViewCell.swift in Sources */,
+				114EC4F327C6A82C00319A86 /* VideoModel.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		1134025127BE9AA700EE6A86 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1134025227BE9AA700EE6A86 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		1134025927BE9AA800EE6A86 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1134025A27BE9AA800EE6A86 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		1134025D27BE9AA800EE6A86 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		1134025E27BE9AA800EE6A86 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		1134026027BE9AA800EE6A86 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 849CA5B506F4A97C6AC279D0 /* Pods-VideoPlayer.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = ZUNRT8VPKW;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = VideoPlayer/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = AfanasevAI.VideoPlayer;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		1134026127BE9AA800EE6A86 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9F170B6D93B77F9AA601287D /* Pods-VideoPlayer.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = ZUNRT8VPKW;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = VideoPlayer/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = AfanasevAI.VideoPlayer;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1134024327BE9AA700EE6A86 /* Build configuration list for PBXProject "VideoPlayer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1134025D27BE9AA800EE6A86 /* Debug */,
+				1134025E27BE9AA800EE6A86 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1134025F27BE9AA800EE6A86 /* Build configuration list for PBXNativeTarget "VideoPlayer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1134026027BE9AA800EE6A86 /* Debug */,
+				1134026127BE9AA800EE6A86 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		1134025427BE9AA700EE6A86 /* VideoPlayer.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				1134025527BE9AA700EE6A86 /* VideoPlayer.xcdatamodel */,
+			);
+			currentVersion = 1134025527BE9AA700EE6A86 /* VideoPlayer.xcdatamodel */;
+			path = VideoPlayer.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 1134024027BE9AA700EE6A86 /* Project object */;
+}
