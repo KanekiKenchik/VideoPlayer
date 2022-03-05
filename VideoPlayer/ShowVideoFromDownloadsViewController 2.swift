@@ -110,6 +110,14 @@ class ShowVideoFromDownloadsViewController: UIViewController {
             self.present(alert, animated: true, completion: nil)
         }
         
+        NotificationCenter.default.addObserver(self, selector: #selector(self.didPlayToEnd), name: .AVPlayerItemDidPlayToEndTime, object: nil)
+        
+    }
+    
+    @objc func didPlayToEnd() {
+        self.player.seek(to: CMTimeMakeWithSeconds(0, preferredTimescale: 1000))
+        self.playButton.setImage(UIImage(systemName: "pause"), for: .normal)
+        print("Video has stopped")
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
