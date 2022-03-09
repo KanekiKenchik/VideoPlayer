@@ -67,17 +67,14 @@ class SearchViewController: UIViewController, URLSessionDelegate {
             return
         }
         
-        if videoProgressSlider.maximumValue == 0.0 {
-            let alert = UIAlertController(title: "Error", message: "The URL does not contain video. Enter the valid URL first", preferredStyle: UIAlertController.Style.alert)
-            alert.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: nil))
-            self.present(alert, animated: true, completion: nil)
-            return
-        }
+        ifPlayerHasNoVideo()
         
         NotificationCenter.default.addObserver(self, selector: #selector(self.didPlayToEnd), name: .AVPlayerItemDidPlayToEndTime, object: nil)
     }
     
     @IBAction func videoProgressSliderAction(_ sender: UISlider) {
+        
+        ifPlayerHasNoVideo()
         
         if ifVideoIsEntered(player: player) != 0 {
             self.player.seek(to: CMTime(seconds: Double(self.videoProgressSlider.value), preferredTimescale: 1000))
@@ -86,6 +83,8 @@ class SearchViewController: UIViewController, URLSessionDelegate {
     }
     
     @IBAction func playButtonAction(_ sender: UIButton) {
+        
+        ifPlayerHasNoVideo()
         
         if ifVideoIsEntered(player: player) != 0 {
             if self.player.timeControlStatus == .playing {
@@ -104,6 +103,8 @@ class SearchViewController: UIViewController, URLSessionDelegate {
     @IBOutlet weak var fastForwardButton: UIButton!
     
     @IBAction func downloadButton(_ sender: UIButton) {
+        
+        ifPlayerHasNoVideo()
         
         guard Reachability.isConnectedToNetwork() == true else {
             
@@ -133,6 +134,8 @@ class SearchViewController: UIViewController, URLSessionDelegate {
     
     @IBAction func volumeButtonAction(_ sender: Any) {
         
+        ifPlayerHasNoVideo()
+        
         if ifVideoIsEntered(player: player) != 0 {
             if player.volume == 0.0 {
                 volumeButton.setImage(UIImage(systemName: "speaker.wave.3"), for: .normal)
@@ -147,6 +150,8 @@ class SearchViewController: UIViewController, URLSessionDelegate {
     
     @IBAction func rewindButtonAction(_ sender: Any) {
         
+        ifPlayerHasNoVideo()
+        
         if ifVideoIsEntered(player: player) != 0 {
             self.player.seek(to: CMTime(seconds: player.currentTime().seconds-15.0, preferredTimescale: 1000))
             self.timeLabel.text = self.formatter.string(from: Date(timeIntervalSince1970: TimeInterval(Int(player.currentTime().seconds-15.0))))
@@ -155,6 +160,8 @@ class SearchViewController: UIViewController, URLSessionDelegate {
     }
     
     @IBAction func fastForwardButtonAction(_ sender: Any) {
+        
+        ifPlayerHasNoVideo()
         
         if ifVideoIsEntered(player: player) != 0 {
             self.player.seek(to: CMTime(seconds: player.currentTime().seconds+15.0, preferredTimescale: 1000))
@@ -236,6 +243,15 @@ class SearchViewController: UIViewController, URLSessionDelegate {
         
         self.downloadTask?.resume()
  
+    }
+    
+    func ifPlayerHasNoVideo() {
+        if videoProgressSlider.maximumValue == 0.0 {
+            let alert = UIAlertController(title: "Error", message: "The URL does not contain video. Enter the valid URL first", preferredStyle: UIAlertController.Style.alert)
+            alert.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
+            return
+        }
     }
     
     @objc func didPlayToEnd() {
