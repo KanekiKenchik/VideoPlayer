@@ -21,6 +21,8 @@ class SearchViewController: UIViewController, URLSessionDelegate {
     
     var videoURL: String?
     
+    var progressKVOContext: UnsafeMutableRawPointer?
+    
     @IBOutlet weak var avPlayerView: AVPlayerView!
     
     @IBOutlet weak var urlPlaceholder: UITextField!
@@ -174,9 +176,16 @@ class SearchViewController: UIViewController, URLSessionDelegate {
         urlPlaceholder.text = ""
     }
     
+    
+    @IBOutlet weak var progressView: UIProgressView!
+    
+    @IBOutlet weak var progressLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        progressView.isHidden = true
+        progressLabel.isHidden = true
         // Do any additional setup after loading the view.
     }
     
@@ -190,8 +199,40 @@ class SearchViewController: UIViewController, URLSessionDelegate {
         return 1
     }
 
+    override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
+            if context == &self.progressKVOContext, let keyPath = keyPath {
+                switch keyPath {
+                case "fractionCompleted":
+                    guard let progress = object as? Progress else {
+                        return
+                    }
+                    
+                    DispatchQueue.main.async { [weak self] in
+                        self?.progressLabel.text = "\(Int(progress.fractionCompleted*100))%"
+                        self?.progressView.progress = Float(progress.fractionCompleted)
+                        if progress.fractionCompleted == 1 {
+                            self?.progressView.isHidden = true
+                            self?.progressLabel.isHidden = true
+                            let alert = UIAlertController(title: "Saving", message: "Video saved successfully", preferredStyle: .alert)
+                            alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
+                            self?.present(alert, animated: true, completion: nil)
+                        }
+                    }
+                    
+                case "isCancelled":
+                    print(keyPath)
+                default:
+                    break
+                }
+            } else {
+                super.observeValue(forKeyPath: keyPath, of: object, change: change, context: context)
+            }
+        }
     
     func saveVideo(videoName: String) {
+        
+        progressView.isHidden = false
+        progressLabel.isHidden = false
         
         let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
         let entity = NSEntityDescription.entity(forEntityName: "Video", in: context)
@@ -241,6 +282,8 @@ class SearchViewController: UIViewController, URLSessionDelegate {
 
         })
         
+        downloadTask?.progress.addObserver(self, forKeyPath: "fractionCompleted", options: .new, context: &self.progressKVOContext)
+        
         self.downloadTask?.resume()
  
     }
@@ -256,7 +299,7 @@ class SearchViewController: UIViewController, URLSessionDelegate {
     
     @objc func didPlayToEnd() {
         self.player.seek(to: CMTimeMakeWithSeconds(0, preferredTimescale: 1000))
-        self.playButton.setImage(UIImage(systemName: "pause"), for: .normal)
+        self.playButton.setImage(UIImage(systemName: "play"), for: .normal)
         print("Video has stopped")
     }
     

@@ -70,6 +70,10 @@ class DownloadsViewController: UIViewController {
         }
     }
     
+    @IBAction func clearSearchField(_ sender: Any) {
+        videoNamePlaceholder.text = ""
+    }
+    
     override func viewWillAppear(_ animated: Bool) {
         videos.removeAll()
         getData()
